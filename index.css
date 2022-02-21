@@ -1,0 +1,50 @@
+:root {
+    --border: 5px solid;
+    --loader-size: 100px;
+}
+
+#loader-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#loader {
+    border-top: var(--border);
+    border-left: var(--border);
+    width: var(--loader-size);
+    height: var(--loader-size);
+    border-radius: 50%;
+    animation: loader-animation 1.5s infinite linear;
+
+}
+
+.hidden {
+    content-visibility: hidden;
+}
+
+#results-area {
+    display: flex;
+    flex-wrap: wrap;
+}
+.single-show {
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes loader-animation {
+    0% {transform: rotate(0);}
+    50% {transform: rotate(180deg)}
+    100% {transform: rotate(360deg);}
+
+    
+}
